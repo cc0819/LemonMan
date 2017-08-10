@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_homepage_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_home_bar" />
+
+    <!--<include layout="@layout/fragment_home_viewpage_bar" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_ViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

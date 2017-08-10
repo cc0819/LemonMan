@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#FFD704"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_weight="1" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_weight="2"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/discover_bar_follow"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/textview_radius"
+            android:gravity="center"
+            android:text="热门" />
+
+        <TextView
+            android:id="@+id/discover_bar_replace"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/textview_radius"
+            android:gravity="center"
+            android:text="分类" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/discover_bar_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/search_normal" />
+    </RelativeLayout>
+
+</LinearLayout>
