@@ -6,8 +6,6 @@
     android:background="@color/bg_color"
     android:orientation="vertical" >
 
-    <include layout="@layout/fragment_discover_bar" />
-
     <LinearLayout
         android:id="@+id/discover"
         android:layout_width="match_parent"

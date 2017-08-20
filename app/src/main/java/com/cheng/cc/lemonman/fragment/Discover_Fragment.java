@@ -2,7 +2,7 @@ package com.cheng.cc.lemonman.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +32,6 @@ public class Discover_Fragment extends BaseFragment {
     TextView discoverBarReplace;
     @BindView(R.id.discover_bar_iv)
     ImageView discoverBarIv;
-    @BindView(R.id.discover)
-    Fragment discover;
     Unbinder unbinder;
 
     @Nullable
@@ -41,6 +39,9 @@ public class Discover_Fragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_discover, container, false);
         unbinder = ButterKnife.bind(this, view);
+        FragmentTransaction fragTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragTransaction.replace(R.id.discover, new Discover_Hot_Fragment());
+        fragTransaction.commit();
         return view;
     }
 
@@ -59,10 +60,14 @@ public class Discover_Fragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.discover_bar_follow:
-
+                FragmentTransaction fragTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragTransaction.replace(R.id.discover, new Discover_Hot_Fragment());
+                fragTransaction.commit();
                 break;
             case R.id.discover_bar_replace:
-
+                FragmentTransaction fragTransaction1 = getActivity().getSupportFragmentManager().beginTransaction();
+                fragTransaction1.replace(R.id.discover, new Discover_Class_Fragment());
+                fragTransaction1.commit();
                 break;
             case R.id.discover_bar_iv:
 

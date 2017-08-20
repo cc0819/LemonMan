@@ -2,6 +2,7 @@ package com.cheng.cc.lemonman.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
+
 /**
  * @author Created by cc on 17/8/9.
  * @fileName Discover_Fragment
@@ -31,7 +34,8 @@ import butterknife.Unbinder;
 
 public class Discover_Class_Fragment extends BaseFragment {
 
-    private String[] names = {"新番", "短篇", "完结",
+    private String[] names = {
+            "新番", "短篇", "完结",
             "男性", "恋爱", "爆笑",
             "耽美", "恐怖", "剧情",
             "日常", "三次元", "治愈",
@@ -57,18 +61,13 @@ public class Discover_Class_Fragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_discover_class, container, false);
-
         unbinder = ButterKnife.bind(this, view);
-
-        return view;
-    }
-
-    @Override
-    protected void lazyLoad() {
         initData();
-        DiscoverHot_Adapter discoverHot_adapter = new DiscoverHot_Adapter();
-        gridView.setAdapter(discoverHot_adapter);
 
+        Log.e(TAG, "onCreateView: " + data.size());
+        DiscoverHot_Adapter discoverHot_adapter = new DiscoverHot_Adapter(data);
+        gridView.setAdapter(discoverHot_adapter);
+        discoverHot_adapter.notifyDataSetChanged();
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -78,10 +77,15 @@ public class Discover_Class_Fragment extends BaseFragment {
             }
         });
 
+        return view;
+    }
 
+    @Override
+    protected void lazyLoad() {
     }
 
     private void initData() {
+
         data = new ArrayList<>();
         for (int i = 0; i < types.length; i++) {
             DiscoverClass_Bean bean = new DiscoverClass_Bean();
@@ -89,6 +93,7 @@ public class Discover_Class_Fragment extends BaseFragment {
             bean.setTypes(types[i]);
             data.add(bean);
         }
+
     }
 
     @Override
@@ -97,48 +102,53 @@ public class Discover_Class_Fragment extends BaseFragment {
         unbinder.unbind();
     }
 
-     public class DiscoverHot_Adapter extends BaseAdapter{
+    public class DiscoverHot_Adapter extends BaseAdapter {
+        private List<DiscoverClass_Bean> dataTemp;
 
-         @Override
-         public int getCount() {
-             return names.length;
-         }
+        public DiscoverHot_Adapter(List<DiscoverClass_Bean> dataTemp) {
+            this.dataTemp = dataTemp;
+        }
 
-         @Override
-         public Object getItem(int position) {
-             return  data.get(position);
-         }
+        @Override
+        public int getCount() {
+            return dataTemp.size();
+        }
 
-         @Override
-         public long getItemId(int position) {
-             return position;
-         }
+        @Override
+        public Object getItem(int position) {
+            return dataTemp.get(position);
+        }
 
-         @Override
-         public View getView(int position, View convertView, ViewGroup parent) {
-             ViewHolder vHolder = null;
-             if (convertView == null) {
-                 convertView = LayoutInflater.from(getActivity()).inflate(
-                         R.layout.item_discoverclass, null);
-                 vHolder = new ViewHolder();
-                 convertView.setTag(vHolder);
-             } else {
-                 vHolder = (ViewHolder) convertView.getTag();
-             }
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
 
-            vHolder.class_type.setImageResource(data.get(position).getTypes());
-            vHolder.class_text.setText(data.get(position).getNames());
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder vHolder = null;
+            if (convertView == null) {
+                convertView = LayoutInflater.from(getContext()).inflate(
+                        R.layout.item_discoverclass, null);
+                vHolder = new ViewHolder();
+                vHolder.classText = (TextView) convertView.findViewById(R.id.class_text);
+                vHolder.classType = (ImageView) convertView.findViewById(R.id.class_type);
+                convertView.setTag(vHolder);
+            } else {
+                vHolder = (ViewHolder) convertView.getTag();
+            }
 
-             return convertView;
-         }
-     }
+            vHolder.classText.setText(dataTemp.get(position).getNames());
+            vHolder.classType.setImageResource(dataTemp.get(position).getTypes());
+
+            return convertView;
+        }
 
 
-    private class ViewHolder {
-        ImageView class_type;
-        TextView class_text;
-
-
+        private class ViewHolder {
+            ImageView classType;
+            TextView classText;
+        }
     }
 
 

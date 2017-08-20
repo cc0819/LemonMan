@@ -3,14 +3,19 @@
     android:id="@+id/fragment_search_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
+    android:background="@color/white"
     android:orientation="vertical" >
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"/>
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/size_10_dp"
+        android:layout_marginBottom="@dimen/size_10_dp"
+        android:listSelector="@color/white"
+        />
 
 
 </LinearLayout>
