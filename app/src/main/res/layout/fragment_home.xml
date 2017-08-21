@@ -8,7 +8,7 @@
 
     <include layout="@layout/fragment_home_bar" />
 
-    <!--<include layout="@layout/fragment_home_viewpage_bar" />-->
+    <include layout="@layout/fragment_home_viewpage_bar" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/home_ViewPager"

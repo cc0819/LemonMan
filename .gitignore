@@ -31,6 +31,4 @@ local.properties
 .gradle
 .idea/vcs.xml
 app/libs/
-app/src/main/java/com/cheng/cc/lemonman/adapter/
 app/src/main/java/com/cheng/cc/lemonman/views/
-app/src/main/res/drawable/
