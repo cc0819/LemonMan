@@ -6,12 +6,43 @@
     android:background="@color/bg_color"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/discover"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/dis_hot_carousel" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <include layout="@layout/dis_hot_popularity" />
+
+                <include layout="@layout/dis_hot_rank" />
+
+                <include layout="@layout/dis_hot_news" />
+
+                <include layout="@layout/groom"/>
+
+                <ImageView
+                    android:id="@+id/bt_contribute"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/bg_bottom_send_comic_normal"
+                    android:layout_marginBottom="40dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

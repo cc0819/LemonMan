@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FFD704"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="7dp"
+        android:layout_weight="5"
+        android:background="@drawable/search_radius"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:contentDescription=""
+            android:id="@+id/search_img"
+            android:layout_width="0dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_search_searchbar_search" />
+
+        <AutoCompleteTextView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="12"
+            android:background="@drawable/search_radius"
+            android:ems="15"
+            android:hint="输入作品名/作者"
+            android:textSize="12sp" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_cancel"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

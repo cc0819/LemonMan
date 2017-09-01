@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#fff" >
+
+    <ImageView
+        android:id="@+id/content_backspace"
+        android:layout_width="53dp"
+        android:layout_height="match_parent"
+        android:contentDescription=""
+        android:src="@mipmap/back_up" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:textSize="20sp" />
+
+</RelativeLayout>

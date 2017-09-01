@@ -31,4 +31,3 @@ local.properties
 .gradle
 .idea/vcs.xml
 app/libs/
-app/src/main/java/com/cheng/cc/lemonman/views/

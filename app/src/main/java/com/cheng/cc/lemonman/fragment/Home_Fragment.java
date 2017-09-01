@@ -1,5 +1,6 @@
 package com.cheng.cc.lemonman.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.RadioGroup;
 
 import com.cheng.cc.lemonman.BaseFragment;
 import com.cheng.cc.lemonman.R;
+import com.cheng.cc.lemonman.activity.Search_Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -139,6 +141,8 @@ public class Home_Fragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.home_img:
+                Intent intent = new Intent(getActivity(),Search_Activity.class);
+                getActivity().startActivity(intent);
                 break;
             case R.id.one:
                 homeViewPager.setCurrentItem(0, false);

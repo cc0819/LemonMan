@@ -26,10 +26,16 @@
         <activity
             android:name=".activity.Splash_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.Setting_Activity" />
-        <activity android:name=".activity.Collecttion_Activity" />
-        <activity android:name=".activity.Attention_Activity" />
-        <activity android:name=".activity.Message_Activity"></activity>
+        <activity android:name=".activity.Setting_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Collecttion_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Attention_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Message_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Search_Activity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
