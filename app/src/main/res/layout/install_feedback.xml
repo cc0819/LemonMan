@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/install_iv"
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:src="@drawable/c1" />
+
+        <TextView
+            android:id="@+id/install_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textView1"
+            android:gravity="center_horizontal"
+            android:text="发送"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="意见反馈"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="top"
+        android:hint="请您在这里填写您对萌漫漫画的意见，我门将不断努力改进，感谢支持"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:textSize="16sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="留下电话/QQ/邮箱(可选)，以便我们与您联系"
+        android:inputType="textMultiLine"
+        android:textSize="16sp" >
+    </EditText>
+
+</LinearLayout>
