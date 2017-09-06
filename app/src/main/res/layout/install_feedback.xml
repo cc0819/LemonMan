@@ -15,7 +15,7 @@
             android:layout_width="53dp"
             android:layout_height="match_parent"
             android:contentDescription=""
-            android:src="@drawable/c1" />
+            android:src="@mipmap/back_up" />
 
         <TextView
             android:id="@+id/install_tv"

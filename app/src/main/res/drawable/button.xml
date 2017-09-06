@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 主体背景颜色值 -->
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape>
+            <gradient
+                android:angle="90"
+                android:centerColor="#ffd704"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#ffd704"
+                android:startColor="#ffd704"
+                android:type="linear" />
+
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="2dp"
+                android:top="2dp" />
+            <!-- 应该是圆角 -->
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -35,7 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:gravity="center"
-                        android:text="@string/install1"
+                        android:text="低流量"
                         android:textSize="15sp" />
 
                     <TextView
@@ -43,7 +43,7 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="@string/install2"
+                        android:text="非wifi环境下加载低质量图片，可为你节省70%流量"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -53,8 +53,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/ic_push_switch_close" />
+                    android:contentDescription=""
+                    android:src="@mipmap/ic_push_switch_close" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -69,7 +69,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install3" />
+                    android:text="赏个好评" />
             </RelativeLayout>
 
             <View
@@ -89,15 +89,15 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install4" />
+                    android:text="意见反馈" />
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/jiant1" />
+                    android:contentDescription=""
+                    android:src="@mipmap/row_right" />
             </RelativeLayout>
 
             <View
@@ -116,7 +116,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install5" />
+                    android:text="推荐给好友" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -131,7 +131,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install6" />
+                    android:text="清理内存" />
             </RelativeLayout>
 
             <View
@@ -151,15 +151,15 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install7" />
+                    android:text="关于萌漫" />
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/jiant1" />
+                    android:contentDescription=""
+                    android:src="@mipmap/row_right" />
             </RelativeLayout>
 
             <View
@@ -179,7 +179,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install8" />
+                    android:text="版本更新" />
             </RelativeLayout>
 
             <View
@@ -199,15 +199,15 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install9" />
+                    android:text="用户协议" />
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/jiant1" />
+                    android:contentDescription=""
+                    android:src="@mipmap/row_right" />
             </RelativeLayout>
 
             <TextView
@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_vertical"
-                android:text="@string/install10" />
+                android:text="推荐应用" />
 
             <LinearLayout
                 android:id="@+id/www_ll"
@@ -229,8 +229,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/ic_push_switch_giving" />
+                    android:contentDescription=""
+                    android:src="@mipmap/ic_push_switch_giving" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -241,15 +241,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:gravity="center"
-                        android:text="@string/install11"
+                        android:text="礼物说"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:contentDescription="@string/desc"
-                        android:text="@string/install12"
+                        android:contentDescription=""
+                        android:text="全网美物精选器"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -270,25 +270,28 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:text="@string/install13" />
+                    android:text="更多精彩应用" />
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="@string/desc"
-                    android:src="@drawable/jiant1" />
+                    android:contentDescription=""
+                    android:src="@mipmap/row_right" />
             </RelativeLayout>
 
             <Button
                 android:id="@+id/install_btn"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/button"
-                android:text="@string/install14" />
+                android:text="退出当前帐号" />
         </LinearLayout>
     </ScrollView>
 

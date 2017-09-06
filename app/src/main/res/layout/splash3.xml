@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/splash3"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="bottom"
+     >
 
     <TextView
         android:id="@+id/fun"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom|center"
-
-        android:text="点击任意位置进入应用" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/size_15_dp"
+        android:paddingBottom="@dimen/size_15_dp"
+        android:layout_marginBottom="@dimen/size_15_dp"
+        android:layout_marginLeft="@dimen/size_30_dp"
+        android:layout_marginRight="@dimen/size_30_dp"
+        android:background="@drawable/button"
+        android:text="进入应用" />
 
 </LinearLayout>

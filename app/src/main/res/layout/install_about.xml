@@ -22,7 +22,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:gravity="center_horizontal"
-            android:text="@string/guanyumengman"
+            android:text="关于萌漫"
             android:textSize="20sp" />
     </RelativeLayout>
 
@@ -33,7 +33,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="42dp"
-        android:text="@string/_203_4_" />
+        android:text="橙如说" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
-        android:text="@string/_2948898227_qq_com" />
+        android:text="联系方式：1186669460@qq.com" />
 
     <TextView
         android:id="@+id/textView1"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/_v_1_0_0_10000_" />
+        android:text="萌漫漫画 v.1.0.0" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -58,7 +58,7 @@
         android:layout_above="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
-        android:contentDescription="@string/desc"
-        android:src="@drawable/logo" />
+        android:contentDescription=""
+        android:src="@mipmap/logo" />
 
 </RelativeLayout>
